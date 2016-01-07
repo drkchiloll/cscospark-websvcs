@@ -1,0 +1,25 @@
+{
+  "name": "cscospark-ulfile-websvc",
+  "version": "1.0.0",
+  "description": "A WebAPI that accepts and uploads files into Cisco Spark Rooms programmatically",
+  "main": "sparkupload-api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drkchiloll/cscospark-ulfile-websvc.git"
+  },
+  "author": "Sam Womack",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drkchiloll/cscospark-ulfile-websvc/issues"
+  },
+  "homepage": "https://github.com/drkchiloll/cscospark-ulfile-websvc#readme",
+  "dependencies": {
+    "bluebird": "^3.1.1",
+    "body-parser": "^1.14.2",
+    "csco-spark": "^2.0.4",
+    "express": "^4.13.3"
+  }
+}
