@@ -41,9 +41,10 @@ var postData = {
 
 request({
   uri: apiUrl,
+  method: 'POST',
   headers: {'Content-Type': 'application/json'},
   strictSSL: false,
-  json: data
+  json: postData
 }, function(err, res, body) {
   // Handle Response
 });
