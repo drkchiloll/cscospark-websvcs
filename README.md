@@ -16,6 +16,10 @@ There are several requirements in order to utilize this API:
 4. Convert your local file into a proper blob (for images the buffer needs to converted into a BASE64 String)
 5. File Limitation at this point is 1gb (we'll see how that goes)
 
+#### Supported File Types
+
+* I have only tested with TXT based files so far such as .txt, .md, .json, .js, .py, et al.
+
 #### Examples
 
 ##### JavaScript/NodeJS
