@@ -2,9 +2,8 @@ var express = require('express'),
     path = require('path'),
     bodyParser = require('body-parser');
 
-var cntrler = require('./lib/cntrler.js');
-
 var app = express();
+
 app
   .use(bodyParser.json({limit: '1000mb'}))
   .use(bodyParser.urlencoded({extended: true}))
@@ -12,11 +11,5 @@ app
 
 // Pass app and express to the uldl router
 require('./router/uldl.js')(app, express);
-
-// app.post('/fileuploader', cntrler.postFile);
-// app.get('/dlfile/:fileName', (req, res) => {
-//   var fn = req.params.fileName;
-//   res.sendFile(path.join(__dirname, `./files/${fn}`));
-// });
 
 app.listen(8181);
