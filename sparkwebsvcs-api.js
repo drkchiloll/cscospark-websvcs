@@ -10,10 +10,13 @@ app
   .use(bodyParser.urlencoded({extended: true}))
   .use(express.static('./files'));
 
-app.post('/fileuploader', cntrler.postFile);
-app.get('/dlfile/:fileName', (req, res) => {
-  var fn = req.params.fileName;
-  res.sendFile(path.join(__dirname, `./files/${fn}`));
-});
+// Pass app and express to the uldl router
+require('./router/uldl.js')(app, express);
+
+// app.post('/fileuploader', cntrler.postFile);
+// app.get('/dlfile/:fileName', (req, res) => {
+//   var fn = req.params.fileName;
+//   res.sendFile(path.join(__dirname, `./files/${fn}`));
+// });
 
 app.listen(8181);
