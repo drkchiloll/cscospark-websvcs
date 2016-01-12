@@ -1,4 +1,4 @@
-var hooksCntrler = require('./lib/hooksCntrler');
+var hooksCntrler = require('../lib/hooksCntrler');
 
 module.exports = (app, express) => {
   var router = express.Router();
