@@ -11,5 +11,6 @@ app
 
 // Pass app and express to the uldl router
 require('./router/uldl.js')(app, express);
+require('./router/hooks.js')(app, express);
 
 app.listen(8181);
