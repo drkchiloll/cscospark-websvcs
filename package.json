@@ -20,6 +20,7 @@
     "bluebird": "^3.1.1",
     "body-parser": "^1.14.2",
     "csco-spark": "^2.0.5",
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "nxus-cfger": "^1.0.2"
   }
 }
