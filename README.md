@@ -1,3 +1,5 @@
+# Various Cisco Spark Web Services APIs
+
 ### Cisco Spark File Upload Web Service API
 
 This API allows users who do not have an external web server to temporarily post/upload files so that they can be added to a Spark Room of their choosing.
@@ -18,7 +20,11 @@ There are several requirements in order to utilize this API:
 
 #### Supported File Types
 
-* I have only tested with TXT based files so far such as .txt, .md, .json, .js, .py, et al.
+* ALL TXT Based Files (JS, HTML, JSON, PY, et al)
+* PNG, JPG
+* ZIP
+* DOCX, PPTX, XLSX
+* PDF
 
 #### Examples
 
