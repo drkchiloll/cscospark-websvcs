@@ -45,7 +45,7 @@ There are several requirements in order to utilize this API:
 
 ##### Endpoint
 
-![](http://citydilse.com/images/pr.jpg =55x20) __https://45.55.244.195/fileuploader__
+<img src='http://citydilse.com/images/pr.jpg' width=55 height=20> __https://45.55.244.195/fileuploader__
 
 ##### JavaScript/NodeJS
 
