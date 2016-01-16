@@ -45,7 +45,7 @@ There are several requirements in order to utilize this API:
 
 ##### Endpoint
 
-<button style='background-color: orange'>POST</button> __https://45.55.244.195/fileuploader__
+[[POST]] __https://45.55.244.195/fileuploader__
 
 ##### JavaScript/NodeJS
 
