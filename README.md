@@ -1,7 +1,7 @@
 # Various Cisco Spark Web Services APIs
 
-** Endpoint **
-** https://45.55.244.195/ **
+__Endpoint__
+__https://45.55.244.195/__
 
 ### Cisco Spark File Upload Web Service API
 
