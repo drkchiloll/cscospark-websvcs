@@ -1,5 +1,8 @@
 # Various Cisco Spark Web Services APIs
 
+** Endpoint **
+** https://45.55.244.195/ **
+
 ### Cisco Spark File Upload Web Service API
 
 This API allows users who do not have an external web server to temporarily post/upload files so that they can be added to a Spark Room of their choosing.
