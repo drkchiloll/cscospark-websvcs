@@ -47,6 +47,14 @@ There are several requirements in order to utilize this API:
 
 <img src='http://citydilse.com/images/pr.jpg' width=55 height=20> __https://45.55.244.195/fileuploader__
 
+```javascript
+{
+  sparkToken: 'token',
+  sparkRoom: 'roomId',
+  data: [{fileName: 'filename', blob: 'file encoded data'}]
+}
+```
+
 ##### JavaScript/NodeJS
 
 ```javascript
