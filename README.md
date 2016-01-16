@@ -4,11 +4,22 @@ __Endpoint__
 
 __https://45.55.244.195/__
 
+*__Disclaimer__: Please note that although I am using SSL, I'm am also utilizing a Self-Signed Certificate (signed certs cost too much); so your file transfer(s) will be Encrypted between your program and this API, but in the case of trusting the self-signed Cert your requests have to disable strict SSL enforcement
+
+```
+// NodeJS using request module
+{strictSSL : false}
+// NodeJS using (built-in) HTTPS module
+{rejectUnauthorized : false}
+# PY
+req.post(url=..., verify=False)
+```
+
 ### Cisco Spark File Upload Web Service API
 
 This API allows users who do not have an external web server to temporarily post/upload files so that they can be added to a Spark Room of their choosing.
 
-Cisco Spark is a cloud based team collaboration platform that includes an extensive API for developers(builders) to dynamically create collaboration rooms, exchange messages and files, perform video conferences and much more functionality.
+Cisco Spark is a cloud based team collaboration platform that includes an extensive API for developers(builders) to dynamically create collaboration rooms, exchange messages and files, perform video conferences and much more.
 
 #### Usage
 
@@ -31,6 +42,10 @@ There are several requirements in order to utilize this API:
 * PDF
 
 #### Examples
+
+##### Endpoint
+
+<button style='background-color: orange'>POST</button> __https://45.55.244.195/fileuploader__
 
 ##### JavaScript/NodeJS
 
