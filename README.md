@@ -4,7 +4,7 @@ __Endpoint__
 
 __https://45.55.244.195/__
 
-*__Disclaimer__: Please note that although I am using SSL, I'm am also utilizing a Self-Signed Certificate (signed certs cost too much); so your file transfer(s) will be Encrypted between your program and this API, but in the case of trusting the self-signed Cert your requests have to disable strict SSL enforcement
+** __Disclaimer__: Please note that although I am using SSL, I'm also utilizing a Self-Signed Certificate (signed certs cost too much); so your file transfer(s) will be Encrypted between your program and this API, but in the case of trusting the self-signed Cert your requests have to disable strict SSL enforcement
 
 ```
 // NodeJS using request module
@@ -13,6 +13,56 @@ __https://45.55.244.195/__
 {rejectUnauthorized : false}
 # PY
 req.post(url=..., verify=False)
+```
+
+### Machine Based Authentication
+
+Using a __non-Corporate/SSO Spark account__, for example, one using @GMAIL.COM, perform OAuth to:
+
+<img src='http://citydilse.com/images/pr.jpg' width=55 height=22> __https://45.55.244.195/authenticate__
+
+```
+// Headers
+{ "Content-Type" : "application/json" }
+
+// POST DATA
+{
+  "user":      "user@example.com",
+  "pass":      "yourpassword",
+  "id":        "your apps client_id",
+  "secret":    "your apps client_secret",
+  redirectUri: "your apps redirect_uri"
+}
+```
+
+#### HowTo
+
+First You have to have a Machine Account as mentioned.
+
+##### Example Using Python
+
+``` python
+import requests
+import json
+
+uri = 'https://45.55.244.195/authenticate'
+authData = {
+  'user': 'someone@example.com',
+  'pass': 'someones password',
+  'id': 'someones app client_id,
+  'secret': 'someones app client_secret',
+  redirectUri: 'someones app redirect_uri'
+}
+headers = { 'Content-Type' : 'application/json' }
+requests.post(
+  url=uri,
+  headers=headers,
+  data=json.dumps(authData),
+  verify=False
+)
+# access_token/refresh_token
+print requests.text
+
 ```
 
 ### Cisco Spark File Upload Web Service API
