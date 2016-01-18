@@ -1,10 +1,8 @@
-var ulFileCntrler = require('../lib/fileCntrler.js');
-
-module.exports = (app, express) => {
+module.exports = (app, express, fileCntrler) => {
   var router = express.Router();
 
-  router.post('/fileuploader', ulFileCntrler.postFile);
-  router.get('/dlfile/:filename', ulFileCntrler.hostFile);
+  router.post('/fileuploader', fileCntrler.postFile);
+  router.get('/dlfile/:filename', fileCntrler.hostFile);
 
   app.use(router);
 };
