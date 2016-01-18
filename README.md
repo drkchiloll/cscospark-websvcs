@@ -19,7 +19,7 @@ req.post(url=..., verify=False)
 
 Using a __non-Corporate/SSO Spark account__, for example, one using @GMAIL.COM, perform OAuth to:
 
-<img src='http://citydilse.com/images/pr.jpg' width=55 height=22> __https://45.55.244.195/authenticate__
+<img src='http://citydilse.com/images/pr.jpg' width=55 height=22> h3 https://45.55.244.195/authenticate
 
 ```
 // Headers
