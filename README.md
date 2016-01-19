@@ -59,14 +59,14 @@ authData = {
   'redirectUri': 'someones app redirect_uri'
 }
 headers = { 'Content-Type' : 'application/json' }
-requests.post(
+req = requests.post(
   url=uri,
   headers=headers,
   data=json.dumps(authData),
   verify=False
 )
 # access_token/refresh_token
-print requests.text
+print req.text
 
 ```
 
