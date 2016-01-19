@@ -17,7 +17,7 @@ req.post(url=..., verify=False)
 
 ## Machine Based Authentication
 
-Using a __non-Corporate/SSO Spark account__, for example, one using @GMAIL.COM, perform OAuth to:
+Using a __non-Corporate/SSO Spark account__, for example, one using @GMAIL.COM or @Outlook.com, perform OAuth to:
 
 <img src='http://citydilse.com/images/pr.jpg' width=55 height=22> https://45.55.244.195/authenticate
 
