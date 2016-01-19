@@ -19,7 +19,7 @@ req.post(url=..., verify=False)
 
 Using a __non-Corporate/SSO Spark account__, for example, one using @GMAIL.COM, perform OAuth to:
 
-<img src='http://citydilse.com/images/pr.jpg' width=55 height=22> h3 https://45.55.244.195/authenticate
+<img src='http://citydilse.com/images/pr.jpg' width=55 height=22> https://45.55.244.195/authenticate
 
 ```
 // Headers
@@ -37,7 +37,12 @@ Using a __non-Corporate/SSO Spark account__, for example, one using @GMAIL.COM, 
 
 #### HowTo
 
-First You have to have a Machine Account as mentioned.
+1. You have to have a Machine Account as mentioned. CORPORATE Accounts do not work (mine doesn't at least which is @WWT.COM)
+2. Goto https://developer.ciscospark.com Login with the aforementioned account
+3. Goto My Apps (top right adjacent your Avatar)
+4. Add An Application; The Redirect URL can be anything; The SCOPES need to include ALL Options..
+5. SAVE (there will be an Error but don't worry)
+6. Go Back Into the App and Copy your Client ID and Secret somewhere you can reference from your Language of Choice
 
 ##### Example Using Python
 
