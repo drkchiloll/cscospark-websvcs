@@ -27,10 +27,10 @@ Using a __non-Corporate/SSO Spark account__, for example, one using @GMAIL.COM, 
 
 // POST DATA
 {
-  "user":      "user@example.com",
-  "pass":      "yourpassword",
-  "id":        "your apps client_id",
-  "secret":    "your apps client_secret",
+  "user":        "user@example.com",
+  "pass":        "yourpassword",
+  "id":          "your apps client_id",
+  "secret":      "your apps client_secret",
   "redirectUri": "your apps redirect_uri"
 }
 ```
