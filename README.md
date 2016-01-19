@@ -44,6 +44,12 @@ Using a __non-Corporate/SSO Spark account__, for example, one using @GMAIL.COM, 
 5. SAVE (there will be an Error but don't worry)
 6. Go Back Into the App and Copy your Client ID and Secret somewhere you can reference from your Language of Choice
 
+##### Example Using cURL
+
+```curl
+curl -H "Content-Type: application/json" -X POST -d '{"user":"user@gmail.com","pass": "password", "id":"client_id","secret":"client_secret","redirectUri":"http://example.com"}' --insecure https://45.55.244.195/authenticate
+```
+
 ##### Example Using Python
 
 ``` python
