@@ -54,9 +54,9 @@ uri = 'https://45.55.244.195/authenticate'
 authData = {
   'user': 'someone@example.com',
   'pass': 'someones password',
-  'id': 'someones app client_id,
+  'id': 'someones app client_id',
   'secret': 'someones app client_secret',
-  redirectUri: 'someones app redirect_uri'
+  'redirectUri': 'someones app redirect_uri'
 }
 headers = { 'Content-Type' : 'application/json' }
 requests.post(
