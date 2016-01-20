@@ -5,8 +5,9 @@ module.exports = (app, express, authCntrler) => {
   var router = express.Router();
 
   var axxLogStream = fs.createWriteStream(__dirname + '/access.log', {flags: 'a'});
-
-  router.post('/authenticate',morgan('combined', {stream: axxLogStream}), authCntrler.authenticate);
+  app.use(morgan('combined', {stream: axxLogStream}));
+  router.post('/authenticate', authCntrler.authenticate);
+  router.post('/refresh', authCntrler.refresh);
 
   app.use(router);
 };
