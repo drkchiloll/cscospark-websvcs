@@ -15,7 +15,7 @@ __https://45.55.244.195/__
 req.post(url=..., verify=False)
 ```
 
-## Machine Based Authentication
+## Machine Based Authentication Plus Refreshing an AccessToken
 
 Using a __non-Corporate/SSO Spark account__, for example, one using @GMAIL.COM or @Outlook.com, perform OAuth to:
 
@@ -35,6 +35,17 @@ Using a __non-Corporate/SSO Spark account__, for example, one using @GMAIL.COM o
 }
 ```
 
+<img src='http://citydilse.com/images/pr.jpg' width=55 height=22> https://45.55.244.195/refresh
+
+```
+// POST DATA
+{
+  "id":            "client_id",
+  "secret":        "client_secret",
+  "refreshToken" : "refresh token received from /auth call"
+}
+```
+
 #### HowTo
 
 1. You have to have a Machine Account as mentioned. CORPORATE Accounts do not work (mine doesn't at least which is @WWT.COM)
@@ -46,8 +57,10 @@ Using a __non-Corporate/SSO Spark account__, for example, one using @GMAIL.COM o
 
 ##### Example Using cURL
 
-```curl
+```
 curl -H "Content-Type: application/json" -X POST -d '{"user":"user@gmail.com","pass": "password", "id":"client_id","secret":"client_secret","redirectUri":"http://example.com"}' --insecure https://45.55.244.195/authenticate
+
+curl -H "Content-Type: application/json" -X POST -d '{"id":"client_id","secret":"client_secret","refreshToken":"token"}' --insecure https://45.55.244.195/refresh
 ```
 
 ##### Example Using Python
