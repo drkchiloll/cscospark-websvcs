@@ -1,10 +1,10 @@
-# Various Cisco Spark Web Services APIs
+# Cisco Spark Web Services APIs
 
 __Endpoint__
 
 __https://45.55.244.195/__
 
-*__Disclaimer__: Please note that although I am using SSL, I'm am also utilizing a Self-Signed Certificate (signed certs cost too much); so your file transfer(s) will be Encrypted between your program and this API, but in the case of trusting the self-signed Cert your requests have to disable strict SSL enforcement
+** __Disclaimer__: Please note that although I am using SSL, I'm also utilizing a Self-Signed Certificate (signed certs cost too much); so your file transfer(s) will be Encrypted between your program and this API, but in the case of trusting the self-signed Cert your requests have to disable strict SSL enforcement
 
 ```
 // NodeJS using request module
@@ -13,6 +13,67 @@ __https://45.55.244.195/__
 {rejectUnauthorized : false}
 # PY
 req.post(url=..., verify=False)
+```
+
+## Machine Based Authentication
+
+Using a __non-Corporate/SSO Spark account__, for example, one using @GMAIL.COM or @Outlook.com, perform OAuth to:
+
+<img src='http://citydilse.com/images/pr.jpg' width=55 height=22> https://45.55.244.195/authenticate
+
+```
+// Headers
+{ "Content-Type" : "application/json" }
+
+// POST DATA
+{
+  "user":        "user@example.com",
+  "pass":        "yourpassword",
+  "id":          "your apps client_id",
+  "secret":      "your apps client_secret",
+  "redirectUri": "your apps redirect_uri"
+}
+```
+
+#### HowTo
+
+1. You have to have a Machine Account as mentioned. CORPORATE Accounts do not work (mine doesn't at least which is @WWT.COM)
+2. Goto https://developer.ciscospark.com Login with the aforementioned account
+3. Goto My Apps (top right adjacent your Avatar)
+4. Add An Application; The Redirect URL can be anything; The SCOPES need to include ALL Options..
+5. SAVE (there will be an Error but don't worry)
+6. Go Back Into the App and Copy your Client ID and Secret somewhere you can reference from your Language of Choice
+
+##### Example Using cURL
+
+```curl
+curl -H "Content-Type: application/json" -X POST -d '{"user":"user@gmail.com","pass": "password", "id":"client_id","secret":"client_secret","redirectUri":"http://example.com"}' --insecure https://45.55.244.195/authenticate
+```
+
+##### Example Using Python
+
+``` python
+import requests
+import json
+
+uri = 'https://45.55.244.195/authenticate'
+authData = {
+  'user': 'someone@example.com',
+  'pass': 'someones password',
+  'id': 'someones app client_id',
+  'secret': 'someones app client_secret',
+  'redirectUri': 'someones app redirect_uri'
+}
+headers = { 'Content-Type' : 'application/json' }
+req = requests.post(
+  url=uri,
+  headers=headers,
+  data=json.dumps(authData),
+  verify=False
+)
+# access_token/refresh_token
+print req.text
+
 ```
 
 ### Cisco Spark File Upload Web Service API
