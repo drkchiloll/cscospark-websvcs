@@ -2,7 +2,7 @@
 
 __Endpoint__
 
-__https://45.55.244.195/__
+__https://ciscospark.live/__
 
 ** __Disclaimer__: Please note that although I am using SSL, I'm also utilizing a Self-Signed Certificate (signed certs cost too much); so your file transfer(s) will be Encrypted between your program and this API, but in the case of trusting the self-signed Cert your requests have to disable strict SSL enforcement
 
@@ -19,7 +19,7 @@ req.post(url=..., verify=False)
 
 Using a __non-Corporate/SSO Spark account__, for example, one using @GMAIL.COM or @Outlook.com, perform OAuth to:
 
-<img src='http://citydilse.com/images/pr.jpg' width=55 height=22> https://45.55.244.195/authenticate
+<img src='http://citydilse.com/images/pr.jpg' width=55 height=22> https://ciscospark.live/authenticate
 
 ```
 // Headers
@@ -35,7 +35,7 @@ Using a __non-Corporate/SSO Spark account__, for example, one using @GMAIL.COM o
 }
 ```
 
-<img src='http://citydilse.com/images/pr.jpg' width=55 height=22> https://45.55.244.195/refresh
+<img src='http://citydilse.com/images/pr.jpg' width=55 height=22> https://ciscospark.live/refresh
 
 ```
 // POST DATA
@@ -58,9 +58,9 @@ Using a __non-Corporate/SSO Spark account__, for example, one using @GMAIL.COM o
 ##### Example Using cURL
 
 ```
-curl -H "Content-Type: application/json" -X POST -d '{"user":"user@gmail.com","pass": "password", "id":"client_id","secret":"client_secret","redirectUri":"http://example.com"}' --insecure https://45.55.244.195/authenticate
+curl -H "Content-Type: application/json" -X POST -d '{"user":"user@gmail.com","pass": "password", "id":"client_id","secret":"client_secret","redirectUri":"http://example.com"}' --insecure https://ciscospark.live/authenticate
 
-curl -H "Content-Type: application/json" -X POST -d '{"id":"client_id","secret":"client_secret","refreshToken":"token"}' --insecure https://45.55.244.195/refresh
+curl -H "Content-Type: application/json" -X POST -d '{"id":"client_id","secret":"client_secret","refreshToken":"token"}' --insecure https://ciscospark.live/refresh
 ```
 
 ##### Example Using Python
@@ -69,7 +69,7 @@ curl -H "Content-Type: application/json" -X POST -d '{"id":"client_id","secret":
 import requests
 import json
 
-uri = 'https://45.55.244.195/authenticate'
+uri = 'https://ciscospark.live/authenticate'
 authData = {
   'user': 'someone@example.com',
   'pass': 'someones password',
@@ -119,7 +119,7 @@ There are several requirements in order to utilize this API:
 
 ##### Endpoint
 
-<img src='http://citydilse.com/images/pr.jpg' width=55 height=20> __https://45.55.244.195/fileuploader__
+<img src='http://citydilse.com/images/pr.jpg' width=55 height=20> __https://ciscospark.live/fileuploader__
 
 ```javascript
 {
@@ -140,7 +140,7 @@ var file1 = fs.readFileSync('./file1.txt', 'utf8');
 var file2 = fs.readFileSync('./file2.png' 'base64');
 
 // Public URL to the API
-var apiUrl = 'https://45.55.244.195/fileuploader';
+var apiUrl = 'https://ciscospark.live/fileuploader';
 var postData = {
   sparkToken: 'token',
   sparkRoom: 'Spark roomId',
