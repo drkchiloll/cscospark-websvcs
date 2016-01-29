@@ -17,6 +17,8 @@ req.post(url=..., verify=False)
 
 ## Machine Based Authentication Plus Refreshing an AccessToken
 
+Cisco Spark API Access Tokens have a lifespan of __14 DAYS__ and the Refresh Token expires after 90 DAYS. However, whenever you use the Refresh Token during those __90 DAYs__ to retrieve a new Access Token the 90 DAY expiry is reset to a new 90 DAYs lifespan, so in theory if you retrieve a new Access Token every 14 days you will never need to perform an __/authenticate__ action again when using this API; you would perform a __/refresh__.
+
 Using a __non-Corporate/SSO Spark account__, for example, one using @GMAIL.COM or @Outlook.com, perform OAuth to:
 
 <img src='http://citydilse.com/images/pr.jpg' width=55 height=22> https://ciscospark.live/authenticate
